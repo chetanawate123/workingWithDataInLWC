@@ -1,0 +1,15 @@
+<template>
+    <lightning-card>
+    <lightning-datatable data={data}
+                         columns={columns}
+                         key-field="id"
+                         sorted-by={sortBy}
+                         sorted-direction={sortDirection}
+                         onsort={handleSortContactData}
+                         hide-checkbox-column="true"></lightning-datatable>
+                         <div slot="footer" class="slds-var-m-horizontal_medium">
+                             <c-pagination record={columns} onupdate={updateContactHandler}></c-pagination>
+                         </div>
+                        </lightning-card>
+
+</template>
